@@ -1,0 +1,89 @@
+body {
+	background-image: url('../images/background.jpg');
+	background-size: cover;
+	font-family: "Tahoma", Geneva, sans-serif;
+}
+.content {
+	width: 60%;
+	margin-left: 20%;
+}
+.logo {
+	width: 16%;
+	margin-left: 42%;
+	margin-top: 40px;
+	margin-bottom: 0px;
+}
+.form {
+	width: 43%;
+	margin-left: 28.5%;
+	background-color: #EAEAF0;
+	height: 450px;
+	-webkit-box-shadow: 0 0 10px #EAEAF0;
+    box-shadow: 0 0 10px #EAEAF0;
+}
+.loginTitle {
+	text-align: center;
+	color: #3EB36A;
+	font-size: 2.5em;
+	padding-top: 10px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+}
+.loginLine {
+	display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #E1E7E9;
+    margin: 1em 0;
+    padding: 0;
+}
+.loginLabel {
+	text-align: center;
+	font-size: 1.2em;
+	color: #434D5C;
+	margin-top: 45px;
+	margin-bottom: 5px;
+	font-family: "Tahoma", Geneva, sans-serif;
+}
+.loginInputDiv {
+	width: 62%;
+	margin-left: 19%;
+	border: 1px solid #96ADB4;
+	height: 40px;
+	display: block;
+}
+.loginInput {
+	width: 80%;
+	float: left;
+	margin-left: 8%;
+	height: 40px;
+	border: none;
+	background-color: transparent;
+}
+.loginInputImg {
+	float: left;
+	width: 12%;
+	height: 40px;
+}
+.loginBtn {
+	display: block;
+	background-color: #3EB36A;
+	color: white;
+	text-align: center;
+	font-size: 1.5em;
+	margin-top: 40px;
+	width: 23%;
+	margin-left: 37.5%;
+	height: 42px;
+	border: none;
+	font-family: "Tahoma", Geneva, sans-serif;
+}
+.registrationLink {
+	display: block;
+	color: #397DBC;
+	text-decoration: none;
+	font-size: 1em;
+	text-align: center;
+	margin-top: 20px;
+	font-family: "Tahoma", Geneva, sans-serif;
+}
