@@ -16,10 +16,12 @@ body {
 .form {
 	width: 43%;
 	margin-left: 28.5%;
-	background-color: #EAEAF0;
+	background-color: #EFEEF1;
 	height: 450px;
 	-webkit-box-shadow: 0 0 10px #EAEAF0;
     box-shadow: 0 0 10px #EAEAF0;
+    opacity: 0.95;
+    filter: alpha(opacity=95); /* For IE8 and earlier */
 }
 .loginTitle {
 	text-align: center;
