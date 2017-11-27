@@ -1,7 +1,6 @@
-body {
+.indexBody {
 	background-image: url('../images/background.jpg');
 	background-size: cover;
-	font-family: "Tahoma", Geneva, sans-serif;
 }
 .content {
 	width: 60%;
@@ -88,4 +87,96 @@ body {
 	text-align: center;
 	margin-top: 20px;
 	font-family: "Tahoma", Geneva, sans-serif;
+}
+
+/*Home style*/
+body {
+	margin: 0px;
+	padding: 0px;
+	/*font-family: "Tahoma", Geneva, sans-serif;*/
+	font-family: 'Open Sans', sans-serif;
+}
+.menu {
+	width: 22%;
+	float: left;
+	height: 100vh;
+	background: #3F966C;
+	margin: 0px;
+	padding: 0px;
+}
+.ontent {
+	width: 78%;
+	float: left;
+	height: 100vh;
+}
+.header {
+	width: 100%;
+	height: 90px;
+	float: left;
+	background: #D1DCDF;
+}
+.mainContent {
+	width: 100%;
+	height: 100vh;
+	float: left;
+	background: #E1E7E9;
+}
+.headerLogo {
+	margin-left: 3.5%;
+	margin-top: 28px;
+	float: left;
+}
+.loggedUser {
+	font-size: 1.3em;
+	color: #60728E;
+	width: 50%;
+	margin-top: 34px;
+	margin-left: 15px;
+	float: left;
+}
+.titleDiv {
+	width: 92%;
+	height: 70px;
+	margin-left: 4%;
+	margin-top: 45px;
+}
+.leftDiv {
+	width: 14%;
+	float: left;
+	height: 70px;
+	background: #3F966C;
+}
+.pageTitle {
+	font-size: 2.2em;
+	text-align: center;
+	color: white;
+	margin-top: 16px;
+}
+.middleDiv {
+	width: 65%;
+	float: left;
+	height: 70px;
+	background: #3EB36A;
+}
+.rightDiv {
+	width: 21%;
+	height: 70px;
+	float: left;
+	background: white;
+}
+.addIcon {
+	color: #3EB36A;
+	font-size: 1.6em !important;
+	text-align: center;
+	width: 20%;
+	float: left;
+	margin-top: 23px;
+	margin-left: 10px;
+}
+.addTitle {
+	color: #3EB36A;
+	font-size: 1.3em;
+	text-align: center;
+	width: 70%;
+	float: left;
 }
