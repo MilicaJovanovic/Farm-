@@ -1,11 +1,13 @@
 <div ng-app="Farma" ng-controller="homeController">
     <nav id="sidebar" ng-class="{ showMe: open }" class="menu">
-        <h1 class="sidebar-header">Farm@</h1>
+        <div class="sidebar-header">
+            <img class="sidebar-logo" src="images/logo.png">
+        </div>
         <div class="sidebar-content">
             <button type="button" class="sidebar-button" ng-click="toggleCollapse()">
                 Nutritions
-                <i style="margin-top: 7px;" ng-if="expanded" class="fa fa-caret-down pull-right"></i>
-                <i style="margin-top: 7px;" ng-if="!expanded" class="fa fa-caret-left pull-right"></i>
+                <i ng-if="expanded" class="fa fa-caret-down pull-right"></i>
+                <i ng-if="!expanded" class="fa fa-caret-left pull-right"></i>
             </button>
             <button type="button" class="sidebar-sub-button">Feeds</button>
         </div>
@@ -28,7 +30,8 @@
                     <span class="caret"></span></button>
                 </div>
                 <ul class="dropdown-menu">
-                    <button type="button" class="btn btn-success" ng-click="logout()">Logout</button>
+                    <div class="arrow-up"></div>
+                    <button type="button" class="btn" ng-click="logout()">Logout</button>
                 </ul>
             </div>
         </div>
