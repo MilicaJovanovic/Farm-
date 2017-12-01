@@ -6,10 +6,17 @@ app.factory('functions', ['$http', function($http) {
 	var mailLink = 'http://172.20.10.11:8080/';
 
 	/*
-	 * Contoller calls for API functions for user manipulation
+	 * Login function, provides mock login logic for
+	 * testing purposes.
 	 */
 	functions.login = function(input) {
-		return $http.post(link + 'login/', input);
+		if (input.username == 'admin@farm-at.com') {
+			if (input.password == 'admin') {
+				return true;
+			}
+			return false;
+		}
+		return false;
 	}
 
 	functions.registerCompany = function(input) {

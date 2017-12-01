@@ -1,12 +1,16 @@
-var app = angular.module('Farma', ['ngRoute']);
+var app = angular.module('Farma', ['ngRoute', 'ui.bootstrap']);
 
 app.config(['$routeProvider', function($routeProvider) {
 	$routeProvider
 	.when('/', {
-		templateUrl: 'index.html'
+		redirectTo: '/index'
 	})
 	.when('/index', {
 		controller: 'indexController',
-		templateUrl: 'index.html'
+		templateUrl: 'views/index.html'
+	})
+	.when('/home', {
+		controller: 'homeController',
+		templateUrl: 'views/home.html'
 	});
 }]);
