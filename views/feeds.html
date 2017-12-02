@@ -1,0 +1,75 @@
+<div ng-app="Farma" ng-controller="feedsController">
+    <!-- Title section -->
+    <div class="titleDiv">
+        <div class="leftDiv">
+            <p class="pageTitle">Feeds</p>
+        </div>
+        <div class="middleDiv"></div>
+        <div class="rightDiv" ng-click="newFeed()">
+            <i class="fa fa-plus-circle"></i>
+            <!-- <p class="addTitle">Add new feed</p> -->
+            Add new feed
+        </div>
+    </div>
+
+    <!-- Table section -->
+    <div class="tableDiv">
+        <h2 class="table-header">Browse the list below to get the details of a specific feed.</h2>
+        <div class="table-content">
+            <span>
+                <div class="search-box">
+                    <input class="search-input" type="text" name="searchBox" ng-model="searchQuery" />
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
+                <div class="search-filters">
+                    <form>
+                        <label class="block"><input type="radio" name="radgroup" value="" checked="checked">All</label>
+                        <label class="block"><input type="radio" name="radgroup" value="true">Only default</label>
+                        <label class="block"><input type="radio" name="radgroup" value="false">Only not default</label>
+                    </form>
+                </div>
+                <div class="search-select">
+                    <select class="search-input" ng-model="selectQuery" ng-options="x for x in selectOptions">
+                        <option value="" selected>-- Select Feed Category --</option>
+                    </select>
+                </div>
+            </span>
+            <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Default</th>
+                        <th>Supplier</th>
+                        <th>Feed Category</th>
+                        <th>IFN</th>
+                        <th>Cost</th>
+                        <th>Forage Desc.</th>
+                        <th>PAF</th>
+                        <th>CL</th>
+                        <th>PHE</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="obj in objects | filter : paginate | filter : searchQuery | filter : radioQuery | filter : selectQuery">
+                        <td>{{obj.name}}</td>
+                        <td>{{obj.default}}</td>
+                        <td>{{obj.supplier}}</td>
+                        <td>{{obj.feedCategory}}</td>
+                        <td>{{obj.ifn}}</td>
+                        <td>{{obj.cost}} e</td>
+                        <td>{{obj.description}}</td>
+                        <td>{{obj.paf}}</td>
+                        <td>{{obj.cl}}</td>
+                        <td>{{obj.phe}}</td>
+                        <td>
+                            <i class="fa fa-file" aria-hidden="true"></i>
+                            <button type="button" ng-click="edit(obj)">Edit</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <pagination total-items="totalItems" ng-model="currentPage" max-size="20" boundary-links="true" items-per-page="numPerPage" class="pagination-sm"></pagination>
+        </div>
+    </div>
+</div>

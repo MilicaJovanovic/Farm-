@@ -9,7 +9,7 @@
                 <i ng-if="expanded" class="fa fa-caret-down pull-right"></i>
                 <i ng-if="!expanded" class="fa fa-caret-left pull-right"></i>
             </button>
-            <button type="button" class="sidebar-sub-button">Feeds</button>
+            <button type="button" class="sidebar-sub-button" ng-click="toPage('feeds')">Feeds</button>
         </div>
     </nav>
     <div ng-class="{ display : !open } " class="ontent">
@@ -38,53 +38,8 @@
 
         <!-- Main section -->
         <div class="mainContent">
-            <!-- Title section -->
-            <div class="titleDiv">
-                <div class="leftDiv">
-                    <p class="pageTitle">Feeds</p>
-                </div>
-                <div class="middleDiv"></div>
-                <div class="rightDiv">
-                    <i class="fa fa-plus-circle"></i>
-                    <!-- <p class="addTitle">Add new feed</p> -->
-                    Add new feed
-                </div>
-            </div>
-
-            <!-- Table section -->
-            <div class="tableDiv">
-                <h2 class="table-header">Browse the list below to get the details of a specific feed.</h2>
-                <div class="table-content">
-                    <span>
-                    <div class="search-box">
-                        <input class="search-input" type="text" name="searchBox" ng-model="searchQuery" />
-                        <i class="fa fa-search" aria-hidden="true"></i>
-                    </div>
-                    <div class="search-filters">
-                        <form>
-                            <label class="block"><input type="radio" name="radgroup" value="A">All</label>
-                            <label class="block"><input type="radio" name="radgroup" value="B">Only default</label>
-                            <label class="block"><input type="radio" name="radgroup" value="C">Only not default</label>
-                        </form>
-                    </div>
-                    </span>
-                    <table class="table table-striped table-hover table-bordered">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Name</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr ng-repeat="obj in objects | filter : paginate | filter : searchQuery">
-                                <td>{{obj.id}}</td>
-                                <td>{{obj.name}}</td>
-                                </tr>
-                        </tbody>
-                    </table>
-                    <pagination total-items="totalItems" ng-model="currentPage" max-size="20" boundary-links="true" items-per-page="numPerPage" class="pagination-sm"></pagination>
-                </div>
-            </div>
+            <div ng-if="currentPage == 'feeds'" ng-include="'views/feeds.html'"></div>
+            <div ng-if="currentPage == 'newFeed'" ng-include="'views/newfeed.html'"></div>
         </div>
     </div>
 </div>

@@ -220,6 +220,7 @@ body {
 .sidebar-content {
 	background-color: #D1DCDF;
 	height: 100vh;
+	margin-top: 10px;
 }
 .sidebar-button {
 	border: none;
@@ -327,4 +328,77 @@ body {
 }
 button {
 	outline: none;
+}
+.search-select {
+	width: 30%;
+	border: 1px solid black;
+	color: #3EB36A;
+	font-size: 1.5em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	margin-bottom: 20px;
+	float: right;
+}
+
+/* New Feed component */
+.middleDivNewFeed {
+	width: 86%;
+	float: left;
+	height: 70px;
+	background: #3EB36A;
+}
+.titleDivWhite {
+	width: 92%;
+	height: 70px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	background-color: white;
+}
+.pageTitleNewFeed {
+	font-size: 2.2em;
+	text-align: left;
+	color: #3EB36A;
+	padding-top: 15px;
+	margin-left: 25px;
+}
+.feedTypeForm {
+	width: 92%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+	background-color: white;
+}
+.searchSelectNewFeed {
+	width: 30%;
+	border: 1px solid black;
+	color: #3EB36A;
+	font-size: 1.5em;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 10px;
+	margin-top: 20px;
+	float: left;
+}
+.feedCategory {
+	float: left;
+	display: block;
+	margin-top: 25px;
+	margin-left: 20px;
+	margin-right: 5%;
+}
+.general-title {
+	color: #3EB36A;
+	padding-top: 30px;
+	font-size: 1.8em;
+	margin-left: 30px;
+}
+.row-custom {
+	text-align: center;
+}
+.col-custom {
+	text-align: right;
+	padding-right: 6% !important;
 }
