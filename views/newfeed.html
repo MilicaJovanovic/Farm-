@@ -1,0 +1,126 @@
+<div ng-app="Farma" ng-controller="newFeedController">
+    <!-- Title section -->
+    <div class="titleDiv">
+        <div class="leftDiv">
+            <p class="pageTitle">Feeds</p>
+        </div>
+        <div class="middleDivNewFeed"></div>
+    </div>
+    <div class="titleDivWhite">
+        <p class="pageTitleNewFeed">Add Feed</p>
+    </div>
+
+    <!-- Main section -->
+    <div id="general" class="feedTypeForm">
+        <div class="row">
+            <div class="col">
+                <label class="feedCategory" for="categorySelect">Feed Category</label>
+                <div class="searchSelectNewFeed">
+                    <select name="categorySelect" class="search-input" ng-model="selectQuery" ng-options="x for x in selectOptions">
+                        <option value="" selected>-- Select Feed Category --</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
+                <label class="feedCategory" for="categorySelect">Feed Name</label>
+                <div class="searchSelectNewFeed">
+                    <select name="nameSelect" class="search-input" ng-model="selectName" ng-options="x for x in selectNames">
+                        <option value="" selected>-- Select Feed --</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>Default Feed </p>
+                <p>Yes</p>
+            </div>
+            <div class="col">
+                <p>ifn </p>
+                <p>{{currentFeed.ifn}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>Supplier </p>
+                <p>{{currentFeed.supplier}}</p>
+            </div>
+            <div class="col">
+                <p>Cost </p>
+                <p>{{currentFeed.cost}} e</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <p>Forage Desc. </p>
+                <p>{{currentFeed.description}}</p>
+            </div>
+        </div>
+        <hr>
+    </div>
+
+    <!-- General section -->
+    <div ng-if="selected" class="feedTypeForm">
+        <p class="general-title">General</p>
+        <hr>
+        <div class="row">
+            <div class="col-sm-4 col-custom">
+                <label for="seedName">Name</label>
+                <input type="text" name="seedName" ng-model="currentFeed.name" ng-disabled="editing" />
+            </div>
+            <div class="col-sm-4 col-custom">
+                <label for="seedSupplier">Supplier</label>
+                <input type="text" name="seedSupplier" ng-model="currentFeed.supplier" />
+            </div>
+            <div class="cpl-sm-4 col-custom">
+                <label for="seedCost">Cost</label>
+                <input type="number" name="seedCost" ng-model="currentFeed.cost" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 col-custom">
+                <label for="seedDefault">Default</label>
+                <input type="text" name="seedDefault" disabled="disabled" ng-model="currentFeed.default" />
+            </div>
+            <div class="col-sm-4 col-custom">
+                <label for="seedCategory">Feed Category</label>
+                <input type="text" name="seedCategory" ng-model="selectQuery" disabled="disabled" />
+            </div>
+            <div class="cpl-sm-4 col-custom">
+                <label for="seedDescription">Forage Description</label>
+                <input type="text" name="seedDescription" ng-model="currentFeed.description" ng-disabled="editing" />
+            </div>
+        </div>
+        <div class="row row-custom">
+            <label for="seedIfn">ifn</label>
+            <input type="text" name="seedIfn" ng-model="currentFeed.ifn" ng-disabled="editing" />
+        </div>
+    </div>
+
+    <!-- Nutritions section -->
+    <div ng-if="selected" class="feedTypeForm">
+        <p class="general-title">Nutritions</p>
+        <hr>
+        <div class="row">
+            <div class="col-sm-4 col-custom">
+                <label for="seedPaf">paf</label>
+                <input type="number" name="seedPaf" ng-model="currentFeed.paf" ng-disabled="editing" />
+            </div>
+            <div class="col-sm-4 col-custom">
+                <label for="seedCl">cl</label>
+                <input type="number" name="seedCl" ng-model="currentFeed.cl" ng-disabled="editing" />
+            </div>
+            <div class="cpl-sm-4 col-custom">
+                <label for="seedPhe">phe</label>
+                <input type="number" name="seedPhe" ng-model="currentFeed.phe" ng-disabled="editing" />
+            </div>
+        </div>
+    </div>
+
+    <!-- Commands section -->
+    <div class="feedTypeForm">
+        <button type="button" ng-click="toPage('feeds')">Cancel</button>
+        <button ng-disabled="!selected" type="button" ng-click="saveOrUpdate()">Add</button>
+    </div>
+</div>
