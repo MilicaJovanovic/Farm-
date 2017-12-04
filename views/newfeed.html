@@ -7,7 +7,7 @@
         <div class="middleDivNewFeed"></div>
     </div>
     <div class="titleDivWhite">
-        <p class="pageTitleNewFeed">Add Feed</p>
+        <p class="pageTitleNewFeed">{{commandText}} Feed</p>
     </div>
 
     <!-- Main section -->
@@ -48,7 +48,7 @@
             </div>
             <div class="col-sm-6">
                 <span class="general-info-left">Cost </span>
-                <span class="general-info-right">€{{currentFeed.cost}}</span>
+                <span class="general-info-right">€ {{currentFeed.cost}}</span>
             </div>
         </div>
         <div class="row general-info">
@@ -125,6 +125,6 @@
     <!-- Commands section -->
     <div class="footer">
         <button type="button" ng-click="toPage('feeds')" class="button cancel-button">Cancel</button>
-        <button ng-disabled="!selected" type="button" ng-click="saveOrUpdate()" class="button add-button">Add</button>
+        <button ng-disabled="!selected" type="button" ng-click="saveOrUpdate()" class="button add-button">{{commandText}}</button>
     </div>
 </div>

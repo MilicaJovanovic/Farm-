@@ -17,6 +17,7 @@ app.controller('newFeedController', ['$scope', 'functions', '$http', '$location'
     $scope.selected = false;
     $scope.currentFeed = JSON.parse(localStorage.getItem('currentFeed'));
     $scope.editing = false;
+    $scope.commandText = 'Add';
     
     if ($scope.currentFeed == null) {
         $scope.currentFeed = {
@@ -37,6 +38,7 @@ app.controller('newFeedController', ['$scope', 'functions', '$http', '$location'
         $scope.selectQuery = $scope.currentFeed.feedCategory;
         $("#general").hide();
         $scope.editing = true;
+        $scope.commandText = 'Edit';
     }
 
     $scope.$watch('selectQuery', function() {

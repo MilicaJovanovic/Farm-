@@ -34,43 +34,45 @@
                     </select>
                 </div>
             </span>
-            <table class="table table-striped table-bordered">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Default</th>
-                        <th>Supplier</th>
-                        <th>Feed Category</th>
-                        <th>IFN</th>
-                        <th>Cost</th>
-                        <th>Forage Desc.</th>
-                        <th>PAF</th>
-                        <th>CL</th>
-                        <th>PHE</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="obj in objects | filter : paginate | filter : searchQuery | filter : radioQuery | filter : selectQuery">
-                        <td>{{obj.name}}</td>
-                        <td>{{obj.default}}</td>
-                        <td>{{obj.supplier}}</td>
-                        <td>{{obj.feedCategory}}</td>
-                        <td>{{obj.ifn}}</td>
-                        <td>{{obj.cost}} e</td>
-                        <td>{{obj.description}}</td>
-                        <td>{{obj.paf}}</td>
-                        <td>{{obj.cl}}</td>
-                        <td>{{obj.phe}}</td>
-                        <td>
-                            <div ng-click="edit(obj)" class="edit-button">
-                                <img src="images/edit.png">
-                                <span>Edit</span>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-container">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Default</th>
+                            <th>Supplier</th>
+                            <th>Feed Category</th>
+                            <th>IFN</th>
+                            <th>Cost</th>
+                            <th>Forage Desc.</th>
+                            <th>PAF</th>
+                            <th>CL</th>
+                            <th>PHE</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="obj in objects | filter : paginate | filter : searchQuery | filter : radioQuery | filter : selectQuery">
+                            <td>{{obj.name}}</td>
+                            <td>{{obj.default}}</td>
+                            <td>{{obj.supplier}}</td>
+                            <td>{{obj.feedCategory}}</td>
+                            <td>{{obj.ifn}}</td>
+                            <td>€ {{obj.cost}}</td>
+                            <td>{{obj.description}}</td>
+                            <td>{{obj.paf}}</td>
+                            <td>{{obj.cl}}</td>
+                            <td>{{obj.phe}}</td>
+                            <td>
+                                <div ng-click="edit(obj)" class="edit-button">
+                                    <img src="images/edit.png">
+                                    <span>Edit</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
             <pagination total-items="totalItems" ng-model="currentPage" max-size="20" boundary-links="true" items-per-page="numPerPage" class="pagination"></pagination>
         </div>
     </div>
