@@ -12,7 +12,7 @@
             <button type="button" class="sidebar-sub-button" ng-click="toPage('feeds')">Feeds</button>
         </div>
     </nav>
-    <div ng-class="{ display : !open } " class="ontent">
+    <div ng-class="{ display : !open } " class="menu-toggle">
         <div ng-class="{ display : open }" class="header">
             <!-- Sidebar toggle button -->
             <button ng-if="!open" type="button" class="custom-sidebar" ng-click="toggleSidebar()">
@@ -23,9 +23,9 @@
             </button>
 
             <!-- Logged user info -->
-            <img src="images/user-icon.jpg" class="headerLogo">
+            <img src="images/user-icon.jpg" class="header-logo">
             <div class="dropdown">
-                <div class="loggedUser dropdown-toggle" data-toggle="dropdown">
+                <div class="logged-user dropdown-toggle" data-toggle="dropdown">
                     {{loggedUser.username}}
                     <span class="caret"></span></button>
                 </div>
@@ -37,7 +37,7 @@
         </div>
 
         <!-- Main section -->
-        <div class="mainContent">
+        <div class="main-content">
             <div ng-if="currentPage == 'feeds'" ng-include="'views/feeds.html'"></div>
             <div ng-if="currentPage == 'newFeed'" ng-include="'views/newfeed.html'"></div>
         </div>

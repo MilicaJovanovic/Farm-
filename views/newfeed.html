@@ -1,29 +1,29 @@
 <div ng-app="Farma" ng-controller="newFeedController">
     <!-- Title section -->
-    <div class="titleDiv">
-        <div class="leftDivNewFeed">
-            <p class="pageTitle">Feeds</p>
+    <div class="title-div">
+        <div class="left-div-new-feed">
+            <p class="page-title">Feeds</p>
         </div>
-        <div class="middleDivNewFeed"></div>
+        <div class="middle-div-new-feed"></div>
     </div>
-    <div class="titleDivWhite">
-        <p class="pageTitleNewFeed">{{commandText}} Feed</p>
+    <div class="title-div-white">
+        <p class="page-title-new-feed">{{commandText}} Feed</p>
     </div>
 
     <!-- Main section -->
-    <div id="general" class="feedTypeForm">
+    <div id="general" class="feed-type-form">
         <div class="row">
             <div class="col-sm-6">
-                <label class="feedCategory" for="categorySelect">Feed Category</label>
-                <div class="searchSelectNewFeed">
+                <label class="feed-category" for="categorySelect">Feed Category</label>
+                <div class="search-select-new-feed">
                     <select name="categorySelect" class="search-input" ng-model="selectQuery" ng-options="x for x in selectOptions">
                         <option value="" selected>-- Select Feed Category --</option>
                     </select>
                 </div>
             </div>
             <div class="col-sm-6">
-                <label class="feedCategory" for="categorySelect">Feed Name</label>
-                <div class="searchSelectNewFeed">
+                <label class="feed-category" for="categorySelect">Feed Name</label>
+                <div class="search-select-new-feed">
                     <select name="nameSelect" class="search-input" ng-model="selectName" ng-options="x for x in selectNames">
                         <option value="" selected>-- Select Feed --</option>
                     </select>
@@ -61,7 +61,7 @@
     </div>
 
     <!-- General section -->
-    <div ng-if="selected" class="feedTypeForm">
+    <div ng-if="selected" class="feed-type-form">
         <p class="general-title">General</p>
         <hr class="half-line">
         <div class="row general-info">
@@ -103,7 +103,7 @@
     </div>
 
     <!-- Nutritions section -->
-    <div ng-if="selected" class="feedTypeForm">
+    <div ng-if="selected" class="feed-type-form">
         <p class="general-title">Nutritions</p>
         <hr class="half-line">
         <div class="row general-info">
